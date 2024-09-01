@@ -1,3 +1,7 @@
+// TP1 CELESTE BETANCU
+// COMISIÓN 5
+// LINK AL VIDEO https://www.youtube.com/watch?v=F3zDXOwLKqY
+
 //no hace falta aclarar el tipo de variable, todas serán llamadas "let"
 
 let cant = 10
