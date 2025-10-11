@@ -1,11 +1,41 @@
 function SiguientePantalla(NuevaPantalla) {
-  historial.push(pantalla); // guardar la pantalla actual en el historial
   pantalla = NuevaPantalla;
 }
 
-function VolverPantalla() {
-  if (historial.length > 0) {
-    pantalla = historial.pop();
+function dibujarPantalla(pantallaActual) { 
+
+  if (fondos[pantallaActual]) { 
+    image(fondos[pantallaActual], 0, 0, width, height);
+  }
+
+   if (pantallaActual !== 15) { 
+    FondoDeTexto(textos[pantallaActual]); // <-- Se usa para acceder al array de textos
+  }
+
+  let yBoton = height - 60;
+  let anBoton = 200; 
+  let alBoton = 40;
+
+  if (pantallaActual === 9) { 
+    dibujarBoton(width / 2 - 200, yBoton, anBoton, alBoton, "Lo lleva hacia los gorilas");
+    dibujarBoton(width / 2 + 20, yBoton, anBoton, alBoton, "Desconfía y los oculta");
+
+  } else if (pantallaActual === 12) {
+    dibujarBoton(width / 2 - 200, yBoton, anBoton, alBoton, "Luchar junto a los gorilas");
+    dibujarBoton(width / 2 + 20, yBoton, anBoton, alBoton, "Huir con Jane");
+
+  } else if (pantallaActual === 10 || pantallaActual === 13 || pantallaActual === 14) { 
+    dibujarBoton(width / 2 - 50, yBoton, 100, alBoton, "Créditos");
+
+  } else if (pantallaActual === 15) { 
+    dibujarBoton(width / 2 - 50, yBoton, 100, alBoton, "Reiniciar");
+  }
+
+
+  let BifFinalOCredito = (pantallaActual === 9 || pantallaActual === 12 || pantallaActual === 10 || pantallaActual === 13 || pantallaActual === 14 || pantallaActual === 15);
+
+  if (pantallaActual < textos.length - 1 && !BifFinalOCredito) {
+    dibujarBoton(width - 120, yBoton, 100, alBoton, "Siguiente");
   }
 }
 
