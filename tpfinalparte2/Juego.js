@@ -18,7 +18,7 @@ class Juego {
       }
     }
 
-    for (let i = 0; i < this.cazadores.length; i++) { // length guarda todos los cazadores del juego. devuelve 15, porque hay 15 cazadores.
+    for (let i = 0; i < this.cazadores.length; i++) { // length guarda todos los cazadores del juego. devuelve 5, porque hay 5 cazadores.
       this.cazadores[i].movimiento();
       this.cazadores[i].dibujar();
     }
@@ -80,3 +80,4 @@ class Juego {
     return muertos;
   }
 }
+
