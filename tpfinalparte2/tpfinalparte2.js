@@ -1,7 +1,6 @@
 //TRABAJO PRÁCTICO FINAL (PARTE 2)
 // CELESTE BETANCU, COMISIÓN 5
 // TEMÁTICA: TARZÁN
-// LINK AL VIDEO: 
 
 let objJuego;
 let control;
@@ -54,3 +53,4 @@ function keyPressed() {
   objJuego.teclaPresionada(keyCode);
   }
 }
+
