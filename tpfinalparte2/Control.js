@@ -121,7 +121,6 @@ detectarBoton(x, y, an, al) {
   return mouseX > x && mouseX < x + an && mouseY > y && mouseY < y + al;
 }
 
-//deje esta funcion global xq es una funcion UI
 mostrarVidas (cantidad){
   for (let i = 0; i < cantidad; i++){
   image(corazon, 20 + i * 40, 20, 35, 35);
@@ -142,3 +141,4 @@ tarzanGano() {
   this.dibujarBoton(width / 2 - 75, 380, 150, 50, "MENÚ");
 }
 }
+
